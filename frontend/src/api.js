@@ -1,4 +1,6 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://cloud-native-task-manager-platform-qyqa-iwnu1e6zu.vercel.app";
 
 export async function getTasks() {
   const response = await fetch(`${API_BASE_URL}/api/tasks`);
