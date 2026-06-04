@@ -1,0 +1,9 @@
+flowchart LR
+  User[User Browser] --> Frontend[React Frontend\nNginx Container]
+  Frontend --> API[Node.js/Express API\nDocker Container]
+  API --> Mongo[(MongoDB Database)]
+  GitHub[GitHub Repository] --> Actions[GitHub Actions CI/CD]
+  Actions --> Build[Build/Test Docker Images]
+  Build --> Cloud[Render/AWS/Azure/GCP Deployment]
+  API --> Logs[Console Logs / Platform Logs]
+  API --> Health[/api/health]
